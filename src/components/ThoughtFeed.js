@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import { useEffect } from 'react';
 import firebase from '../firebase'
+import {Flex} from '@chakra-ui/react'
+import Thought from './Thought';
 
 function ThoughtFeed() {
   const [thoughts, setThoughts] = useState([])
@@ -26,13 +28,18 @@ function ThoughtFeed() {
   }
 
   return (
-    <div>
+    <Flex
+      bg={"#F9FAFB"}
+      direction='column'
+      p={50}
+      w="full"
+      alignItems="center"
+      justifyContent="center"
+    >
       {thoughts.map((thought) => (
-        <div key={thought.id}>
-          <h2>{thought.content}</h2>
-        </div>
+        <Thought content={thought.content}/>
       ))}
-    </div>
+    </Flex>
   );
 }
 
