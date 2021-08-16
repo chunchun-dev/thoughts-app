@@ -30,7 +30,7 @@ const Thought = ({content}) => {
             <Link
                 px={3}
                 py={1}
-                bg="gray.600"
+                bg="black"
                 color="gray.100"
                 fontSize="sm"
                 fontWeight="700"

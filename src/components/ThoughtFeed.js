@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { useEffect } from 'react';
 import firebase from '../firebase'
-import {Flex} from '@chakra-ui/react'
+import {Flex, Text} from '@chakra-ui/react'
 import Thought from './Thought';
 
 function ThoughtFeed() {
@@ -36,6 +36,7 @@ function ThoughtFeed() {
       alignItems="center"
       justifyContent="center"
     >
+      <Text fontSize='5xl' marginBottom='20px'>Posts</Text>
       {thoughts.map((thought) => (
         <Thought content={thought.content}/>
       ))}
