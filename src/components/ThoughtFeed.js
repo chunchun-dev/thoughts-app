@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { useEffect } from 'react';
 import firebase from '../firebase'
-import {Flex, Text} from '@chakra-ui/react'
+import {Flex, Spinner, Text} from '@chakra-ui/react'
 import Thought from './Thought';
 
 function ThoughtFeed() {
@@ -24,7 +24,11 @@ function ThoughtFeed() {
   }, [])
 
   if (loading) {
-    return <h1>loading</h1>
+    return (
+    <Flex h='100vh' w='100vw' justifyContent='center' alignItems='center'>
+      <Spinner/>
+    </Flex>
+    )
   }
 
   return (

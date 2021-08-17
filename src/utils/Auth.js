@@ -1,3 +1,4 @@
+import { Spinner } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import firebase from '../firebase'
 
@@ -24,7 +25,7 @@ export const AuthProvider = ({ children }) => {
           height: "80vh",
         }}
       >
-        <h1>Loading User...</h1>
+        <Spinner/>
       </div>
     );
   }
