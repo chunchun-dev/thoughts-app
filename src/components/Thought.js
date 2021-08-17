@@ -36,7 +36,7 @@ const Thought = ({content, timestamp}) => {
                 rounded="md"
                 _hover={{ bg: "gray.500" }}
             >
-            Design
+            Tag
             </Link>
         </Flex>
 
