@@ -2,7 +2,6 @@ import React from "react";
 import {
   chakra,
   Box,
-  Image,
   Flex,
   Link,
 } from "@chakra-ui/react";
