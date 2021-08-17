@@ -263,8 +263,8 @@ const MobileNavItem = ({ label, children, href }) => {
 
 const NAV_ITEMS = [
   {
-    label: 'Popular',
-    href: '#'
+    label: 'New Post',
+    href: '/post'
   },
   {
     label: 'Search',

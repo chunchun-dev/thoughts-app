@@ -7,7 +7,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 
-const Thought = ({content}) => {
+const Thought = ({content, timestamp}) => {
   return (
     <Box
         mx="auto"
@@ -25,7 +25,7 @@ const Thought = ({content}) => {
                 fontSize="sm"
                 color={"gray.600"}
             >
-            Mar 10, 2019
+            Date currently not used
             </chakra.span>
             <Link
                 px={3}

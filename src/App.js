@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import Home from './pages/Home';
 import AuthPage from './pages/AuthPage';
+import PostThoughtForm from './components/PostThoughtForm';
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
             </Route>
             <Route path='/login'>
               <AuthPage/>
+            </Route>
+            <Route path='/post'>
+              <PostThoughtForm/>
             </Route>
           </Switch>
         </Router>
