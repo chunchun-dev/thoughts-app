@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import AuthPage from './pages/AuthPage';
 import PostThoughtForm from './components/PostThoughtForm';
 import Footer from './components/Footer';
+import Search from './pages/Search';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
             </Route>
             <Route path='/post'>
               <PostThoughtForm/>
+            </Route>
+            <Route path='/search'>
+              <Search/>
             </Route>
           </Switch>
         </Router>
