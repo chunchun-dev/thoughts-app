@@ -47,7 +47,7 @@ const Thought = (thought) => {
             >
             {thought.tag}
             </Link>
-            {currentUser.uid == thought.uid && <Link
+            {currentUser !== null && currentUser.uid == thought.uid && <Link
                 px={3}
                 py={1}
                 bg="black"
