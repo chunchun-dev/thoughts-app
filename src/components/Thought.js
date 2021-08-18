@@ -35,32 +35,34 @@ const Thought = (thought) => {
             >
             {currentDate}
             </chakra.span>
-            <Link
-                px={3}
-                py={1}
-                bg="black"
-                color="gray.100"
-                fontSize="sm"
-                fontWeight="700"
-                rounded="md"
-                _hover={{ bg: "gray.500" }}
-            >
-            {thought.tag}
-            </Link>
-            {currentUser !== null && currentUser.uid == thought.uid && <Link
-                px={3}
-                py={1}
-                bg="black"
-                color="gray.100"
-                fontSize="sm"
-                fontWeight="700"
-                rounded="md"
-                background='red.500'
-                _hover={{ bg: "red.700" }}
-                onClick={()=>{DeleteThought(thought)}}
-            >
-            Delete
-            </Link>}
+            <Flex>
+              <Link
+                  px={3}
+                  py={1}
+                  bg="black"
+                  color="gray.100"
+                  fontSize="sm"
+                  fontWeight="700"
+                  rounded="md"
+                  _hover={{ bg: "gray.500" }}
+              >
+              {thought.tag}
+              </Link>
+              {currentUser !== null && currentUser.uid == thought.uid && <Link
+                  px={3}
+                  py={1}
+                  bg="black"
+                  color="gray.100"
+                  fontSize="sm"
+                  fontWeight="700"
+                  rounded="md"
+                  background='red.500'
+                  _hover={{ bg: "red.700" }}
+                  onClick={()=>{DeleteThought(thought)}}
+              >
+              Delete
+              </Link>}
+            </Flex>
         </Flex>
 
         <Box mt={2}>
