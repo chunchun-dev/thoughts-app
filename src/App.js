@@ -9,6 +9,7 @@ import {
 import Home from './pages/Home';
 import AuthPage from './pages/AuthPage';
 import PostThoughtForm from './components/PostThoughtForm';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             </Route>
           </Switch>
         </Router>
+        <Footer/>
       </ChakraProvider>
     </AuthProvider>
   )
