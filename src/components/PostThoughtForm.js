@@ -24,7 +24,18 @@ function PostThoughtForm() {
     } else {
         return (
             <Flex h='100vh' w='100vw' flexDirection='column' justifyContent='center' alignItems='center' background='gray.100'>
-                <Flex direction='column' width='30%' height='60%' justifyContent='center' alignItems='center' background='white' boxShadow='lg' flexDirection='column' rounded={10}>
+                <Flex direction='column' width='30%' height='60%' justifyContent='center' alignItems='center' background='white' boxShadow='lg' flexDirection='column' rounded={10} 
+                sx={{ 
+                
+                    "@media screen and (max-width: 1100px)": {
+                        width: "60%"
+                    },
+                    
+                    "@media screen and (max-width: 485px)": {
+                        width: "90%"
+                    } 
+
+                }}>
                     <Text fontSize='3xl' marginBottom={10}>New Post</Text>
                     <Input type='text' value={content} onChange={(e)=>{setContent(e.target.value)}} width='70%' background='gray.200' height='50' marginBottom={10} placeholder='content'/>
                     <Input type='text' value={tag} onChange={(e)=>{setTag(e.target.value)}} width='70%' background='gray.200' height='50' marginBottom={10} placeholder='tag'/>
