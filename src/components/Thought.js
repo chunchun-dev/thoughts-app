@@ -12,6 +12,9 @@ import { AuthContext } from "../utils/Auth";
 const Thought = (thought) => {
 
   const { currentUser } = useContext(AuthContext);
+  console.log(thought.timestamp)
+  const currentDate = Date(thought.timestamp.seconds*100+thought.timestamp.nanoseconds/100).substring(0, 10)
+  console.log(currentDate)
 
   return (
     <Box
@@ -30,7 +33,7 @@ const Thought = (thought) => {
                 fontSize="sm"
                 color={"gray.600"}
             >
-            {thought.timestamp.toString()}
+            {currentDate}
             </chakra.span>
             <Link
                 px={3}
