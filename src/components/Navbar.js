@@ -272,6 +272,7 @@ const NAV_ITEMS = [
   },
   {
     label: 'Search',
+    href: '/search'
   },
   {
     label: 'Other',
