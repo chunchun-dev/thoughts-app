@@ -6,7 +6,8 @@ import {
   Link,
 } from "@chakra-ui/react";
 
-const Thought = ({content, timestamp}) => {
+const Thought = ({content, timestamp, tag}) => {
+
   return (
     <Box
         mx="auto"
@@ -24,7 +25,7 @@ const Thought = ({content, timestamp}) => {
                 fontSize="sm"
                 color={"gray.600"}
             >
-            Date currently not used
+            {timestamp.toString()}
             </chakra.span>
             <Link
                 px={3}
@@ -36,7 +37,7 @@ const Thought = ({content, timestamp}) => {
                 rounded="md"
                 _hover={{ bg: "gray.500" }}
             >
-            Tag
+            {tag}
             </Link>
         </Flex>
 

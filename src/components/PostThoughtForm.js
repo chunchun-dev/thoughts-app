@@ -11,10 +11,12 @@ function PostThoughtForm() {
     const { currentUser } = useContext(AuthContext);
 
     const [content, setContent] = useState('')
+    const [tag, setTag] = useState('')
 
     const submit = () => {
-        AddThought({ content, id: uuidv4(), timestamp: firebase.firestore.FieldValue.serverTimestamp() })
+        AddThought({ content, tag, id: uuidv4(), timestamp: firebase.firestore.FieldValue.serverTimestamp() })
         setContent('')
+        setTag('')
     }
 
     if (currentUser == null) {
@@ -25,6 +27,7 @@ function PostThoughtForm() {
                 <Flex direction='column' width='30%' height='60%' justifyContent='center' alignItems='center' background='white' boxShadow='lg' flexDirection='column' rounded={10}>
                     <Text fontSize='3xl' marginBottom={10}>New Post</Text>
                     <Input type='text' value={content} onChange={(e)=>{setContent(e.target.value)}} width='70%' background='gray.200' height='50' marginBottom={10} placeholder='content'/>
+                    <Input type='text' value={tag} onChange={(e)=>{setTag(e.target.value)}} width='70%' background='gray.200' height='50' marginBottom={10} placeholder='tag'/>
                     <Button onClick={()=>submit()} background='blue.100' size='lg'>Submit</Button>
                 </Flex>
             </Flex>
