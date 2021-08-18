@@ -28,7 +28,7 @@ const Thought = (thought) => {
         marginBottom='30px'
         width='100%'
     >
-        <Flex justifyContent="space-between" alignItems="center">
+        <Flex justifyContent="space-between" alignItems="center" flexWrap='wrap'>
             <chakra.span
                 fontSize="sm"
                 color={"gray.600"}
@@ -59,6 +59,7 @@ const Thought = (thought) => {
                   background='red.500'
                   _hover={{ bg: "red.700" }}
                   onClick={()=>{DeleteThought(thought)}}
+                  marginLeft={2}
               >
               Delete
               </Link>}
