@@ -5,8 +5,13 @@ import {
   Flex,
   Link,
 } from "@chakra-ui/react";
+import DeleteThought from "../utils/DeleteThought";
+import { useContext } from "react";
+import { AuthContext } from "../utils/Auth";
 
-const Thought = ({content, timestamp, tag}) => {
+const Thought = (thought) => {
+
+  const { currentUser } = useContext(AuthContext);
 
   return (
     <Box
@@ -25,7 +30,7 @@ const Thought = ({content, timestamp, tag}) => {
                 fontSize="sm"
                 color={"gray.600"}
             >
-            {timestamp.toString()}
+            {thought.timestamp.toString()}
             </chakra.span>
             <Link
                 px={3}
@@ -37,13 +42,27 @@ const Thought = ({content, timestamp, tag}) => {
                 rounded="md"
                 _hover={{ bg: "gray.500" }}
             >
-            {tag}
+            {thought.tag}
             </Link>
+            {currentUser.uid == thought.uid && <Link
+                px={3}
+                py={1}
+                bg="black"
+                color="gray.100"
+                fontSize="sm"
+                fontWeight="700"
+                rounded="md"
+                background='red.500'
+                _hover={{ bg: "red.700" }}
+                onClick={()=>{DeleteThought(thought)}}
+            >
+            Delete
+            </Link>}
         </Flex>
 
         <Box mt={2}>
             <chakra.p mt={2} color={"gray.600"}>
-            {content}
+            {thought.content}
             </chakra.p>
         </Box>
     </Box>

@@ -42,7 +42,7 @@ function ThoughtFeed() {
     >
       <Text fontSize='5xl' marginBottom='20px'>Posts</Text>
       {thoughts.map((thought) => (
-        <Thought content={thought.content} timestamp={thought.timestamp} tag={thought.tag} key={thought.id}/>
+        <Thought content={thought.content} timestamp={thought.timestamp} tag={thought.tag} key={thought.id} id={thought.id} uid={thought.uid}/>
       ))}
     </Flex>
   );

@@ -14,7 +14,7 @@ function PostThoughtForm() {
     const [tag, setTag] = useState('')
 
     const submit = () => {
-        AddThought({ content, tag, id: uuidv4(), timestamp: firebase.firestore.FieldValue.serverTimestamp() })
+        AddThought({ content, tag, id: uuidv4(), timestamp: firebase.firestore.FieldValue.serverTimestamp(), uid: currentUser.uid })
         setContent('')
         setTag('')
     }
