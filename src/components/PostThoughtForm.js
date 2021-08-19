@@ -23,8 +23,8 @@ function PostThoughtForm() {
         return <Redirect to='/'/>
     } else {
         return (
-            <Flex h='100vh' w='100vw' flexDirection='column' justifyContent='center' alignItems='center' background='gray.100'>
-                <Flex direction='column' width='30%' height='60%' justifyContent='center' alignItems='center' background='white' boxShadow='lg' flexDirection='column' rounded={10} 
+            <Flex h='100vh' w='100vw' flexDirection='column' justifyContent='center' alignItems='center' background='white'>
+                <Flex direction='column' width='30%' height='60%' justifyContent='center' alignItems='center' background='gray.100' border='gray.200' flexDirection='column' rounded={10}
                 sx={{ 
                 
                     "@media screen and (max-width: 1100px)": {
@@ -36,10 +36,10 @@ function PostThoughtForm() {
                     } 
 
                 }}>
-                    <Text fontSize='3xl' marginBottom={10}>New Post</Text>
-                    <Input type='text' value={content} onChange={(e)=>{setContent(e.target.value)}} width='70%' background='gray.200' height='50' marginBottom={10} placeholder='content'/>
-                    <Input type='text' value={tag} onChange={(e)=>{setTag(e.target.value)}} width='70%' background='gray.200' height='50' marginBottom={10} placeholder='tag'/>
-                    <Button onClick={()=>submit()} background='blue.100' size='lg'>Submit</Button>
+                    <Text fontSize='3xl' marginBottom={10}><b>New Post</b></Text>
+                    <Input type='text' value={content} onChange={(e)=>{setContent(e.target.value)}} width='70%' background='gray.200' height='50' marginBottom={5} placeholder='content'/>
+                    <Input type='text' value={tag} onChange={(e)=>{setTag(e.target.value)}} width='70%' background='gray.200' height='50' marginBottom={5} placeholder='tag'/>
+                    <Button onClick={()=>submit()} background='black' color='white' size='lg'>Submit</Button>
                 </Flex>
             </Flex>
         )
