@@ -39,7 +39,7 @@ function PostThoughtForm() {
                     <Text fontSize='3xl' marginBottom={10}><b>New Post</b></Text>
                     <Input type='text' value={content} onChange={(e)=>{setContent(e.target.value)}} width='70%' background='gray.200' height='50' marginBottom={5} placeholder='content'/>
                     <Input type='text' value={tag} onChange={(e)=>{setTag(e.target.value)}} width='70%' background='gray.200' height='50' marginBottom={5} placeholder='tag'/>
-                    <Button onClick={()=>submit()} background='black' color='white' size='lg'>Submit</Button>
+                    <Button onClick={()=>submit()} background='black' color='white' size='lg' _hover={{ background: 'gray.700' }}>Submit</Button>
                 </Flex>
             </Flex>
         )
